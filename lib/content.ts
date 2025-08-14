@@ -38,6 +38,8 @@ type TechSkill = {
   name: string
 }
 
+export type { Project, WorkExperience, SocialLink, Education, TechSkill }
+
 export const PROJECTS: Project[] = [
   {
     name: 'Macrotrue',
@@ -45,7 +47,7 @@ export const PROJECTS: Project[] = [
       'Macrotrue is a platform that curates macro recipes based on your goals and preferences.',
     link: 'https://macrotrue.vercel.app/',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+      'macrotrue.mp4',
     id: 'project1',
     techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase'],
     thumbnail: '',
@@ -55,7 +57,7 @@ export const PROJECTS: Project[] = [
     description: 'Full Stack Workout Tracker that helps you track your workouts and progress.',
     link: 'https://alwaysv1.vercel.app/',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+      'always.mp4',
     id: 'project2',
     techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase'],
     thumbnail: '',
@@ -65,7 +67,7 @@ export const PROJECTS: Project[] = [
     description: 'A web app that helps you find the best trails for your next adventure.',
     link: 'https://trailtales.vercel.app/',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+      'tt.mp4',
     id: 'project3',
     techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
     thumbnail: '',
@@ -135,3 +137,5 @@ export const TECH_STACK: TechSkill[] = [
 export const PROFILE_IMAGE_URL = '/pfp.jpg'
 
 export const RESUME_URL = '/resume.pdf'
+
+
