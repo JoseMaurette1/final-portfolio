@@ -1,5 +1,6 @@
 'use client'
 import { TextEffect } from '@/components/ui/text-effect'
+import { ThemeSwitch } from '@/components/ui/theme-switch'
 import Link from 'next/link'
 
 export function Header() {
@@ -7,7 +8,7 @@ export function Header() {
     <header className="mb-8 flex items-center justify-between">
       <div>
         <Link href="/" className="font-medium text-black dark:text-white">
-          Julien Nim
+          Jose Maurette
         </Link>
         <TextEffect
           as="p"
@@ -16,8 +17,11 @@ export function Header() {
           className="text-zinc-600 dark:text-zinc-500"
           delay={0.5}
         >
-          Design Engineer
+          Full Stack Developer
         </TextEffect>
+      </div>
+      <div className="text-xs text-zinc-400">
+        <ThemeSwitch />
       </div>
     </header>
   )

@@ -4,22 +4,21 @@ type Project = {
   link: string
   video: string
   id: string
+  techStack?: string[]
+  thumbnail?: string
 }
 
 type WorkExperience = {
   company: string
+  video?: string
+  thumbnail?: string
   title: string
   start: string
   end: string
   link: string
   id: string
-}
-
-type BlogPost = {
-  title: string
-  description: string
-  link: string
-  uid: string
+  description?: string
+  techStack?: string[]
 }
 
 type SocialLink = {
@@ -27,99 +26,112 @@ type SocialLink = {
   link: string
 }
 
+type Education = {
+  institution: string
+  degree: string
+  start: string
+  end: string
+  id: string
+}
+
+type TechSkill = {
+  name: string
+}
+
 export const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
+    name: 'Macrotrue',
     description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
+      'Macrotrue is a platform that curates macro recipes based on your goals and preferences.',
+    link: 'https://macrotrue.vercel.app/',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
     id: 'project1',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase'],
+    thumbnail: '',
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
+    name: 'Always',
+    description: 'Full Stack Workout Tracker that helps you track your workouts and progress.',
+    link: 'https://alwaysv1.vercel.app/',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
     id: 'project2',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase'],
+    thumbnail: '',
+  },
+  {
+    name: 'TrailTales',
+    description: 'A web app that helps you find the best trails for your next adventure.',
+    link: 'https://trailtales.vercel.app/',
+    video:
+      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    id: 'project3',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    thumbnail: '',
   },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
-    end: 'Present',
-    link: 'https://ibelick.com',
+    company: 'Kontaktsource',
+    video: '/ksource.mp4',
+    thumbnail: '/ksource.png',
+    title: 'Lead Developer Intern',
+    start: 'June 2025',
+    end: 'August 2025',
+    link: 'https://kontaktsource.com',
     id: 'work1',
-  },
-  {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
-    end: '2024',
-    link: 'https://ibelick.com',
-    id: 'work2',
-  },
-  {
-    company: 'Freelance',
-    title: 'Front-end Developer',
-    start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
-    id: 'work3',
-  },
-]
-
-export const BLOG_POSTS: BlogPost[] = [
-  {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
-  },
-  {
-    title: 'Why I left my job to start my own company',
     description:
-      'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
-  },
-  {
-    title: 'What I learned from my first year of freelancing',
-    description:
-      'A look back at my first year of freelancing and what I learned',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-3',
-  },
-  {
-    title: 'How to Export Metadata from MDX for Next.js SEO',
-    description: 'A guide on exporting metadata from MDX files to leverage Next.js SEO features.',
-    link: '/blog/example-mdx-metadata',
-    uid: 'blog-4',
+      'Shipped UX-focused features that helped increase client acquisition by 13%. Modernized the front-end architecture with responsive, component-driven UI. Led and mentored a 3-person team to deliver high‑quality releases on time. Managed 70+ client relationships, translating requirements into solutions and resolving bugs and requests. Improved legacy code performance, maintainability, and SEO, raising engagement by 68%.',
+    techStack: ['WordPress', 'JavaScript', 'PHP', 'HTML', 'Tailwind CSS', 'Figma'],
   },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github',
-    link: 'https://github.com/ibelick',
-  },
-  {
-    label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
+    link: 'https://github.com/JoseMaurette1',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
+    link: 'https://www.linkedin.com/in/maurette',
   },
   {
     label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
+    link: 'https://www.instagram.com/hose_04',
   },
 ]
 
-export const EMAIL = 'your@email.com'
+export const EMAIL = 'josemaurette1234@gmail.com'
+
+export const EDUCATION: Education[] = [
+  {
+    institution: 'Florida International University',
+    degree: 'Bachelor of Art in Computer Science',
+    start: 'August 2022',
+    end: 'Expected December 2025',
+    id: 'education1',
+  },
+]
+
+export const TECH_STACK: TechSkill[] = [
+  { name: 'Next.js' },
+  { name: 'React' },
+  { name: 'TypeScript' },
+  { name: 'Tailwind CSS' },
+  { name: 'Framer Motion' },
+  { name: 'WordPress' },
+  { name: 'Node.js' },
+  { name: 'Vite' },
+  { name: 'Supabase' },
+  { name: 'GitHub' },
+  { name: 'Figma' },
+  { name: 'Git' },
+  { name: 'Stripe' },
+  { name: 'Vercel' },
+]
+
+export const PROFILE_IMAGE_URL = '/pfp.jpg'
+
+export const RESUME_URL = '/resume.pdf'
