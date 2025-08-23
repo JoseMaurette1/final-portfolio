@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: 'Jose Maurette',
     template: '%s | Jose Maurette'
   },
-  description: 'Full Stack Developer focused on creating intuitive and performant web experiences. Bridging the gap between design and development.',
+  description: 'Jose Maurette is a Full Stack Developer focused on creating intuitive and performant web experiences. Bridging the gap between design and development.',
   keywords: ['Jose Maurette', 'Full Stack Developer', 'Web Developer', 'React', 'Next.js', 'TypeScript'],
   authors: [{ name: 'Jose Maurette' }],
   creator: 'Jose Maurette',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://maurette.vercel.app/',
     title: 'Jose Maurette',
-    description: 'Full Stack Developer focused on creating intuitive and performant web experiences. Bridging the gap between design and development.',
+    description: 'Jose Maurette is a Full Stack Developer focused on creating intuitive and performant web experiences. Bridging the gap between design and development.',
     siteName: 'Jose Maurette',
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Jose Maurette',
-    description: 'Full Stack Developer focused on creating intuitive and performant web experiences. Bridging the gap between design and development.',
+    description: 'Jose Maurette is a Full Stack Developer focused on creating intuitive and performant web experiences. Bridging the gap between design and development.',
     images: ['/background.png'],
     creator: '@JoseMaurette1',
   },
