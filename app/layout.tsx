@@ -4,6 +4,8 @@ import './globals.css'
 import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
+import { ScrollProgress } from '@/components/ui/scroll-progress'
+import { FloatingElements } from '@/components/ui/floating-elements'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -50,6 +52,8 @@ export default function RootLayout({
           defaultTheme="system"
         >
           <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
+            <ScrollProgress className="fixed z-50 bg-zinc-900 dark:bg-zinc-100" />
+            <FloatingElements />
             <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
               <Header />
               {children}
