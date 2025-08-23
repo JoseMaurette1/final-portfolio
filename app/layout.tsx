@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Inter, JetBrains_Mono, Source_Sans_3, Merriweather } from 'next/font/google'
 import './globals.css'
 import { Header } from './header'
 import { Footer } from './footer'
@@ -14,28 +14,76 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://hosem.vercel.app/'),
+  metadataBase: new URL('https://maurette.vercel.app/'),
   alternates: {
     canonical: '/'
   },
   title: {
-    default: 'Jose - Personal website',
-    template: '%s | Jose'
+    default: 'Jose Maurette',
+    template: '%s | Jose Maurette'
   },
-  description: 'Jose is a software engineer with a passion for building intuitive and performant web experiences.',
+  description: 'Full Stack Developer focused on creating intuitive and performant web experiences. Bridging the gap between design and development.',
+  keywords: ['Jose Maurette', 'Full Stack Developer', 'Web Developer', 'React', 'Next.js', 'TypeScript'],
+  authors: [{ name: 'Jose Maurette' }],
+  creator: 'Jose Maurette',
+  publisher: 'Jose Maurette',
   icons: {
     icon: '/pfp.jpg',
+    shortcut: '/pfp.jpg',
+    apple: '/pfp.jpg',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://maurette.vercel.app/',
+    title: 'Jose Maurette',
+    description: 'Full Stack Developer focused on creating intuitive and performant web experiences. Bridging the gap between design and development.',
+    siteName: 'Jose Maurette',
+    images: [
+      {
+        url: '/pfp.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Jose Maurette - Full Stack Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jose Maurette',
+    description: 'Full Stack Developer focused on creating intuitive and performant web experiences. Bridging the gap between design and development.',
+    images: ['/pfp.jpg'],
+    creator: '@JoseMaurette1',
   },
 };
 
-const geist = Geist({
-  variable: '--font-geist',
+// Primary UI font - Best for headings, navigation, and UI elements
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
+  display: 'swap',
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+// Code font - Best for code snippets, technical content, and developer-focused elements
+const jetBrainsMono = JetBrains_Mono({
+  variable: '--font-jetbrains-mono',
   subsets: ['latin'],
+  display: 'swap',
+})
+
+// Body text font - Best for readable content and paragraphs
+const sourceSans = Source_Sans_3({
+  variable: '--font-source-sans',
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+// Serif font - Best for quotes, testimonials, and special content sections
+const merriweather = Merriweather({
+  variable: '--font-merriweather',
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+  display: 'swap',
 })
 
 export default function RootLayout({
@@ -46,7 +94,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
+        className={`${inter.variable} ${jetBrainsMono.variable} ${sourceSans.variable} ${merriweather.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
       >
         <ThemeProvider
           enableSystem={true}
@@ -54,7 +102,7 @@ export default function RootLayout({
           storageKey="theme"
           defaultTheme="system"
         >
-          <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
+          <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter)]">
             <ScrollProgress className="fixed z-50 bg-zinc-900 dark:bg-zinc-100" />
             <FloatingElements />
             <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">

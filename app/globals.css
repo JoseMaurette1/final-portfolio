@@ -159,3 +159,35 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Font Utility Classes */
+@layer utilities {
+  /* Primary UI Font - Inter */
+  .font-ui {
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* Code Font - JetBrains Mono */
+  .font-code {
+    font-family: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+
+  /* Body Text Font - Source Sans 3 */
+  .font-body {
+    font-family: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* Serif Font - Merriweather */
+  .font-serif {
+    font-family: var(--font-merriweather), Georgia, Cambria, 'Times New Roman', Times, serif;
+  }
+
+  /* Responsive Font Classes */
+  .font-mobile {
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .font-desktop {
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  }
+}
