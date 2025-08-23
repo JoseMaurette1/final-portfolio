@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   creator: 'Jose Maurette',
   publisher: 'Jose Maurette',
   icons: {
-    icon: '/pfp.jpg',
-    shortcut: '/pfp.jpg',
-    apple: '/pfp.jpg',
+    icon: '/background.png',
+    shortcut: '/background.png',
+    apple: '/background.png',
   },
   openGraph: {
     type: 'website',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: 'Jose Maurette',
     images: [
       {
-        url: '/pfp.jpg',
+        url: '/background.png',
         width: 1200,
         height: 630,
         alt: 'Jose Maurette - Full Stack Developer',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Jose Maurette',
     description: 'Full Stack Developer focused on creating intuitive and performant web experiences. Bridging the gap between design and development.',
-    images: ['/pfp.jpg'],
+    images: ['/background.png'],
     creator: '@JoseMaurette1',
   },
 };
