@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     template: '%s | Jose'
   },
   description: 'Jose is a software engineer with a passion for building intuitive and performant web experiences.',
+  icons: {
+    icon: '/pfp.jpg',
+  },
 };
 
 const geist = Geist({
