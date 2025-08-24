@@ -130,9 +130,15 @@ export const TECH_STACK: TechSkill[] = [
   { name: 'GitHub' },
   { name: 'Figma' },
   { name: 'Git' },
-  { name: 'Stripe' },
   { name: 'Vercel' },
+  { name: 'Python' },
+  { name: 'JavaScript' },
+  { name: 'PHP' },
+  { name: 'HTML' },
 ]
+
+
+
 
 export const PROFILE_IMAGE_URL = '/pfp.jpg'
 
