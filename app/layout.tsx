@@ -135,7 +135,11 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body
-        className={`${inter.variable} ${jetBrainsMono.variable} ${sourceSans.variable} ${merriweather.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
+        className={`${inter.variable} ${jetBrainsMono.variable} ${sourceSans.variable} ${merriweather.variable} bg-white tracking-tight antialiased dark:bg-zinc-950 overflow-x-hidden`}
+        style={{
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+        }}
       >
         <ThemeProvider
           enableSystem={true}
