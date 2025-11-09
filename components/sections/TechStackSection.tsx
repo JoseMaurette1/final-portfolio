@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
-import { TechStackEmblaTwoRows } from '@/components/ui/tech-stack-embla'
+import { TechStackEmbla } from '@/components/ui/tech-stack-embla'
 
 type TechSkill = { name: string }
 type Props = { techStack: ReadonlyArray<TechSkill> }
@@ -55,7 +55,7 @@ export const TechStackSection = ({ techStack }: Props) => {
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
-        <TechStackEmblaTwoRows items={techStack.map((s) => s.name)} />
+        <TechStackEmbla items={techStack.map((s) => s.name)} direction="left" durationMs={30000} />
       </motion.div>
     </motion.section>
   )

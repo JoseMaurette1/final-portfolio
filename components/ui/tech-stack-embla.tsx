@@ -19,6 +19,10 @@ export const TechStackEmbla = ({ items, durationMs = 30000, direction = 'left' }
 
   return (
     <div className="relative w-full overflow-hidden">
+      {/* Left fade gradient */}
+      <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-zinc-50 via-zinc-50/80 to-transparent dark:from-zinc-950 dark:via-zinc-950/80" />
+      {/* Right fade gradient */}
+      <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-zinc-50 via-zinc-50/80 to-transparent dark:from-zinc-950 dark:via-zinc-950/80" />
       <motion.div
         className="inline-flex min-w-max shrink-0 items-center gap-2 whitespace-nowrap"
         animate={{ x: [animateFrom, animateTo] }}

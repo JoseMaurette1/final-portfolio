@@ -42,6 +42,15 @@ export type { Project, WorkExperience, SocialLink, Education, TechSkill }
 
 export const PROJECTS: Project[] = [
   {
+    name: 'Spotbuds',
+    description: 'Spotbuds uses the Spotify API to give insights on your top artists, tracks, and genres. Create playlists and share your statistics with your friends.',
+    link: 'https://spotbuds.vercel.app/',
+    video: 'spotbuds.mp4',
+    id: 'project0',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Spotify API'],
+    thumbnail: 'spotbuds.png',
+  },
+  {
     name: 'Macrotrue',
     description:
       'Macrotrue is a platform that curates macro recipes based on your goals and preferences.',
@@ -79,7 +88,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     company: 'Kontaktsource',
     video: '/ksource.mp4',
     thumbnail: '/ksource.png',
-    title: 'Lead Developer Intern',
+    title: 'Web Developer Intern',
     start: 'June 2025',
     end: 'August 2025',
     link: 'https://kontaktsource.com',
@@ -122,18 +131,11 @@ export const TECH_STACK: TechSkill[] = [
   { name: 'React' },
   { name: 'TypeScript' },
   { name: 'Tailwind CSS' },
-  { name: 'Framer Motion' },
   { name: 'WordPress' },
   { name: 'Node.js' },
-  { name: 'Vite' },
-  { name: 'Supabase' },
-  { name: 'GitHub' },
   { name: 'Figma' },
-  { name: 'Git' },
-  { name: 'Vercel' },
   { name: 'Python' },
   { name: 'JavaScript' },
-  { name: 'PHP' },
   { name: 'HTML' },
 ]
 
