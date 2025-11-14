@@ -108,10 +108,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/maurette',
   },
-  {
-    label: 'Instagram',
-    link: 'https://www.instagram.com/hose_04',
-  },
 ]
 
 export const EMAIL = 'josemaurette1234@gmail.com'
