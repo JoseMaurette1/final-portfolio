@@ -43,11 +43,11 @@ export type { Project, WorkExperience, SocialLink, Education, TechSkill }
 export const PROJECTS: Project[] = [
   {
     name: 'Spotbuds',
-    description: 'Spotbuds uses the Spotify API to give insights on your top artists, tracks, and genres. Create playlists and share your statistics with your friends.',
+    description: 'Spotbuds uses the Spotify API to give insights on your top artists, tracks, and genres. Create playlists and share your statistics. View your friends favorite artists and songs!.',
     link: 'https://spotbuds.vercel.app/',
     video: 'spotbuds.mp4',
     id: 'project0',
-    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Spotify API'],
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Spotify API', 'Neon', 'Prisma'],
     thumbnail: 'spotbuds.png',
   },
   {
