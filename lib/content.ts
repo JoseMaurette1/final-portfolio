@@ -117,7 +117,7 @@ export const EDUCATION: Education[] = [
     institution: 'Florida International University',
     degree: 'Bachelor of Art in Computer Science',
     start: 'August 2022',
-    end: 'Expected December 2025',
+    end: 'December 2025',
     id: 'education1',
   },
 ]
@@ -127,7 +127,7 @@ export const TECH_STACK: TechSkill[] = [
   { name: 'React' },
   { name: 'TypeScript' },
   { name: 'Tailwind CSS' },
-  { name: 'WordPress' },
+  { name: 'PosgresQl' },
   { name: 'Node.js' },
   { name: 'Figma' },
   { name: 'Python' },

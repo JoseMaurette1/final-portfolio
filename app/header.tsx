@@ -2,7 +2,11 @@
 import { motion } from 'motion/react'
 import { TextEffect } from '@/components/ui/text-effect'
 import { ThemeSwitch } from '@/components/ui/theme-switch'
-import { LAYOUT_ANIMATIONS, COMPONENT_ANIMATIONS, HOVER_ANIMATIONS } from '@/lib/animations'
+import {
+  LAYOUT_ANIMATIONS,
+  COMPONENT_ANIMATIONS,
+  HOVER_ANIMATIONS,
+} from '@/lib/animations'
 import Link from 'next/link'
 
 export function Header() {
@@ -22,15 +26,14 @@ export function Header() {
             Jose Maurette
           </Link>
         </motion.div>
-        <TextEffect
-          as="p"
-          preset="fade"
-          per="char"
-          className="text-zinc-600 dark:text-zinc-500"
-          delay={0.5}
-        >
-          Full Stack Developer
-        </TextEffect>
+        <div className="flex flex-col items-start gap-2 text-zinc-600 dark:text-zinc-500">
+          <TextEffect as="span" preset="fade" per="char" delay={0.5}>
+            Full Stack Developer
+          </TextEffect>
+          <div className="flex gap-1 justify-start items-start">
+            <TextEffect as="span" preset="fade" per="char" delay={0.5}>Miami, FL</TextEffect>
+          </div>
+        </div>
       </motion.div>
       <motion.div
         className="text-xs text-zinc-400"

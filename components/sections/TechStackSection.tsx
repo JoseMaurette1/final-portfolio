@@ -44,12 +44,6 @@ export const TechStackSection = ({ techStack }: Props) => {
       >
         Tech Stack
       </motion.h3>
-      <motion.p
-        className="text-zinc-600 dark:text-zinc-400 mb-5"
-        variants={ITEM_VARIANTS}
-      >
-        I'm proficient in a wide range of technologies, from frontend to backend, and everything in between.
-      </motion.p>
       <motion.div
         variants={ITEM_VARIANTS}
         whileHover={{ scale: 1.02 }}
