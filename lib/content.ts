@@ -53,8 +53,8 @@ export const PROJECTS: Project[] = [
       'Next.js',
       'React',
       'TypeScript',
-      'Tailwind CSS',
       'Spotify API',
+      'OAuth',
       'Neon',
       'Prisma',
     ],
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
     link: 'https://macrotrue.vercel.app/',
     video: 'macrotrue.mp4',
     id: 'project1',
-    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase'],
+    techStack: ['Next.js', 'React', 'TypeScript', 'Neon', 'Clerk', 'OpenAI'],
     thumbnail: '',
   },
   {
@@ -77,7 +77,7 @@ export const PROJECTS: Project[] = [
     link: 'https://alwaysv1.vercel.app/',
     video: 'always.mp4',
     id: 'project2',
-    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase'],
+    techStack: ['Next.js', 'React', 'TypeScript', 'Supabase'],
     thumbnail: '',
   },
   {
@@ -87,7 +87,7 @@ export const PROJECTS: Project[] = [
     link: 'https://trailtales.vercel.app/',
     video: 'tt.mp4',
     id: 'project3',
-    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    techStack: ['Next.js', 'React', 'TypeScript'],
     thumbnail: '',
   },
 ]
