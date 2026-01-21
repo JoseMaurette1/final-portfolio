@@ -47,7 +47,7 @@ export const PersonalStatsSection = () => {
         className="mb-3 font-[family-name:var(--font-playfair-display)] text-lg font-medium"
         variants={ITEM_VARIANTS}
       >
-        random stats
+        random facts
       </motion.h3>
       <motion.div
         className="flex flex-col space-y-1"

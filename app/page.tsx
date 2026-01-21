@@ -8,7 +8,6 @@ import {
   WORK_EXPERIENCE,
   EDUCATION,
   TECH_STACK,
-  RESUME_URL,
   PROFILE_IMAGE_URL,
 } from '@/lib/content'
 import { HeroSection } from '@/components/sections/HeroSection'
@@ -32,10 +31,7 @@ export default function Personal() {
         key={`page-refresh-${refreshKey}`}
       >
         <motion.div variants={PAGE_ANIMATIONS.section}>
-          <HeroSection
-            profileImageUrl={PROFILE_IMAGE_URL}
-            resumeUrl={RESUME_URL}
-          />
+          <HeroSection profileImageUrl={PROFILE_IMAGE_URL} />
         </motion.div>
 
         <motion.div variants={PAGE_ANIMATIONS.section}>

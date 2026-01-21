@@ -1,11 +1,10 @@
 'use client'
 import { motion } from 'motion/react'
-import { Github, Linkedin, Mail, FileText, BadgeCheck } from 'lucide-react'
+import { Github, Linkedin, Mail, BadgeCheck } from 'lucide-react'
 import { SOCIAL_LINKS, EMAIL } from '@/lib/content'
 
 type Props = {
   profileImageUrl?: string
-  resumeUrl?: string
 }
 
 const ITEM_VARIANTS = {
@@ -32,7 +31,7 @@ const STAGGER_CONTAINER = {
   },
 }
 
-export const HeroSection = ({ profileImageUrl, resumeUrl }: Props) => {
+export const HeroSection = ({ profileImageUrl }: Props) => {
   return (
     <motion.section
       variants={STAGGER_CONTAINER}
@@ -105,19 +104,6 @@ export const HeroSection = ({ profileImageUrl, resumeUrl }: Props) => {
           variants={ITEM_VARIANTS}
         >
           <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-zinc-500 dark:text-zinc-400">
-            {resumeUrl && (
-              <motion.a
-                href={resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FileText size={16} />
-                <span>resume</span>
-              </motion.a>
-            )}
             {SOCIAL_LINKS.map((social) => (
               <motion.a
                 key={social.label}
