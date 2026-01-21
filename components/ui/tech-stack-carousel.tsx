@@ -48,9 +48,11 @@ export const TechStackCarousel = ({ items }: TechStackCarouselProps) => {
   return (
     <div className="space-y-3">
       <CarouselRow items={firstRow} direction="right" duration={24} />
-      <CarouselRow items={secondRow.length ? secondRow : firstRow} direction="left" duration={26} />
+      <CarouselRow
+        items={secondRow.length ? secondRow : firstRow}
+        direction="left"
+        duration={26}
+      />
     </div>
   )
 }
-
-

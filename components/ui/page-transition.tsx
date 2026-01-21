@@ -8,7 +8,10 @@ interface PageTransitionProps {
   className?: string
 }
 
-export const PageTransition = ({ children, className }: PageTransitionProps) => {
+export const PageTransition = ({
+  children,
+  className,
+}: PageTransitionProps) => {
   return (
     <motion.div
       className={className}

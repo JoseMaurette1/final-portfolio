@@ -6,7 +6,7 @@ const FloatingElement = ({
   className,
   delay = 0,
   duration = 20,
-  size = 4
+  size = 4,
 }: {
   className?: string
   delay?: number
@@ -27,7 +27,7 @@ const FloatingElement = ({
 
 export const FloatingElements = () => {
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+    <div className="pointer-events-none fixed inset-0 overflow-hidden">
       <FloatingElement
         className="top-20 left-10"
         delay={0}

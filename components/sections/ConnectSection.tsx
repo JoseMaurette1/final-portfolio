@@ -18,7 +18,7 @@ const ITEM_VARIANTS = {
     transition: {
       duration: 0.5,
       ease: [0.25, 0.46, 0.45, 0.94],
-    }
+    },
   },
 }
 
@@ -33,7 +33,13 @@ const STAGGER_CONTAINER = {
   },
 }
 
-const MagneticSocialLink = ({ children, link }: { children: React.ReactNode; link: string }) => (
+const MagneticSocialLink = ({
+  children,
+  link,
+}: {
+  children: React.ReactNode
+  link: string
+}) => (
   <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
     <motion.a
       href={link}
@@ -42,7 +48,7 @@ const MagneticSocialLink = ({ children, link }: { children: React.ReactNode; lin
       className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
       whileHover={{
         scale: 1.05,
-        transition: { duration: 0.2 }
+        transition: { duration: 0.2 },
       }}
       whileTap={{ scale: 0.95 }}
     >
@@ -77,10 +83,7 @@ export const ConnectSection = ({ email, socials }: Props) => {
       initial="hidden"
       animate="visible"
     >
-      <motion.h3
-        className="mb-5 text-lg font-medium"
-        variants={ITEM_VARIANTS}
-      >
+      <motion.h3 className="mb-5 text-lg font-medium" variants={ITEM_VARIANTS}>
         Connect
       </motion.h3>
       {email && (
@@ -104,11 +107,7 @@ export const ConnectSection = ({ email, socials }: Props) => {
         variants={STAGGER_CONTAINER}
       >
         {socials.map((link, index) => (
-          <motion.div
-            key={link.label}
-            variants={ITEM_VARIANTS}
-            custom={index}
-          >
+          <motion.div key={link.label} variants={ITEM_VARIANTS} custom={index}>
             <MagneticSocialLink link={link.link}>
               {link.label}
             </MagneticSocialLink>
@@ -118,5 +117,3 @@ export const ConnectSection = ({ email, socials }: Props) => {
     </motion.section>
   )
 }
-
-

@@ -6,12 +6,13 @@ export const StructuredData = () => {
     '@type': 'Person',
     name: 'Jose Maurette',
     jobTitle: 'Full Stack Developer',
-    description: 'Full Stack Developer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies.',
+    description:
+      'Full Stack Developer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies.',
     url: 'https://maurette.vercel.app',
     sameAs: [
       'https://github.com/JoseMaurette1',
       'https://www.linkedin.com/in/maurette',
-      'https://www.instagram.com/hose_04'
+      'https://www.instagram.com/hose_04',
     ],
     knowsAbout: [
       'React',
@@ -25,17 +26,17 @@ export const StructuredData = () => {
       'Framer Motion',
       'Supabase',
       'Node.js',
-      'Git'
+      'Git',
     ],
     alumniOf: {
       '@type': 'Organization',
       name: 'Florida International University',
-      url: 'https://www.fiu.edu'
+      url: 'https://www.fiu.edu',
     },
     worksFor: {
       '@type': 'Organization',
       name: 'Kontaktsource',
-      url: 'https://kontaktsource.com'
+      url: 'https://kontaktsource.com',
     },
     image: 'https://maurette.vercel.app/background.png',
     email: 'josemaurette1234@gmail.com',
@@ -43,8 +44,8 @@ export const StructuredData = () => {
       '@type': 'PostalAddress',
       addressLocality: 'Miami',
       addressRegion: 'FL',
-      addressCountry: 'US'
-    }
+      addressCountry: 'US',
+    },
   }
 
   const websiteSchema = {
@@ -52,15 +53,16 @@ export const StructuredData = () => {
     '@type': 'WebSite',
     name: 'Jose Maurette Portfolio',
     url: 'https://maurette.vercel.app',
-    description: 'Personal portfolio website of Jose Maurette, a Full Stack Developer specializing in React, Next.js, and TypeScript.',
+    description:
+      'Personal portfolio website of Jose Maurette, a Full Stack Developer specializing in React, Next.js, and TypeScript.',
     author: {
       '@type': 'Person',
-      name: 'Jose Maurette'
+      name: 'Jose Maurette',
     },
     publisher: {
       '@type': 'Person',
-      name: 'Jose Maurette'
-    }
+      name: 'Jose Maurette',
+    },
   }
 
   const portfolioSchema = {
@@ -69,12 +71,12 @@ export const StructuredData = () => {
     name: 'Jose Maurette Portfolio',
     author: {
       '@type': 'Person',
-      name: 'Jose Maurette'
+      name: 'Jose Maurette',
     },
     description: 'Portfolio showcasing web development projects and skills',
     url: 'https://maurette.vercel.app',
     genre: 'Portfolio',
-    keywords: 'web development, react, next.js, typescript, portfolio'
+    keywords: 'web development, react, next.js, typescript, portfolio',
   }
 
   return (
@@ -82,19 +84,19 @@ export const StructuredData = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema)
+          __html: JSON.stringify(personSchema),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema)
+          __html: JSON.stringify(websiteSchema),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(portfolioSchema)
+          __html: JSON.stringify(portfolioSchema),
         }}
       />
     </>

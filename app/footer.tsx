@@ -19,7 +19,7 @@ export function Footer() {
           transition={{ duration: 0.2 }}
         >
           <TextLoop className="text-xs text-zinc-500">
-            <span>© 2025 Jose Maurette.</span>
+            <span>© {new Date().getFullYear()} Jose Maurette.</span>
             <span>Built with Next.js.</span>
           </TextLoop>
         </motion.a>

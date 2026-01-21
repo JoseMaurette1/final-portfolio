@@ -6,8 +6,6 @@ import { PAGE_ANIMATIONS } from '@/lib/animations'
 import {
   PROJECTS,
   WORK_EXPERIENCE,
-  EMAIL,
-  SOCIAL_LINKS,
   EDUCATION,
   TECH_STACK,
   RESUME_URL,
@@ -18,7 +16,8 @@ import { TechStackSection } from '@/components/sections/TechStackSection'
 import { WorkExperienceSection } from '@/components/sections/WorkExperienceSection'
 import { ProjectsSection } from '@/components/sections/ProjectsSection'
 import { EducationSection } from '@/components/sections/EducationSection'
-import { ConnectSection } from '@/components/sections/ConnectSection'
+import { PersonalStatsSection } from '@/components/sections/PersonalStatsSection'
+import { GithubActivitySection } from '@/components/sections/GithubActivitySection'
 
 export default function Personal() {
   const refreshKey = useRefreshAnimation()
@@ -33,7 +32,10 @@ export default function Personal() {
         key={`page-refresh-${refreshKey}`}
       >
         <motion.div variants={PAGE_ANIMATIONS.section}>
-          <HeroSection profileImageUrl={PROFILE_IMAGE_URL} resumeUrl={RESUME_URL} />
+          <HeroSection
+            profileImageUrl={PROFILE_IMAGE_URL}
+            resumeUrl={RESUME_URL}
+          />
         </motion.div>
 
         <motion.div variants={PAGE_ANIMATIONS.section}>
@@ -49,11 +51,15 @@ export default function Personal() {
         </motion.div>
 
         <motion.div variants={PAGE_ANIMATIONS.section}>
+          <GithubActivitySection />
+        </motion.div>
+
+        <motion.div variants={PAGE_ANIMATIONS.section}>
           <EducationSection education={EDUCATION} />
         </motion.div>
 
         <motion.div variants={PAGE_ANIMATIONS.section}>
-          <ConnectSection email={EMAIL} socials={SOCIAL_LINKS} />
+          <PersonalStatsSection />
         </motion.div>
       </motion.main>
     </PageTransition>

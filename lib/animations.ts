@@ -42,7 +42,7 @@ export const PAGE_ANIMATIONS = {
       opacity: 0,
       y: 30,
       filter: 'blur(10px)',
-      scale: 0.95
+      scale: 0.95,
     },
     visible: {
       opacity: 1,
@@ -52,7 +52,7 @@ export const PAGE_ANIMATIONS = {
       transition: {
         duration: ANIMATION_CONFIG.duration.slow,
         ease: ANIMATION_CONFIG.ease.smooth,
-      }
+      },
     },
   },
 
@@ -95,7 +95,7 @@ export const COMPONENT_ANIMATIONS = {
       transition: {
         duration: ANIMATION_CONFIG.duration.normal,
         ease: ANIMATION_CONFIG.ease.smooth,
-      }
+      },
     },
   },
 
@@ -108,7 +108,7 @@ export const COMPONENT_ANIMATIONS = {
       transition: {
         duration: ANIMATION_CONFIG.duration.slow,
         ease: ANIMATION_CONFIG.ease.smooth,
-      }
+      },
     },
   },
 
@@ -182,6 +182,6 @@ export const FLOATING_ANIMATION = {
   transition: {
     duration: 20,
     repeat: Infinity,
-    ease: "easeInOut",
+    ease: 'easeInOut',
   },
 }
