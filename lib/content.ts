@@ -47,7 +47,7 @@ export const PROJECTS: Project[] = [
     description:
       'A Vim-inspired terminal directory navigation tool using Rust and TUI. Enables rapid filesystem traversal through deterministic two-character key sequences (AA, AS, AD...) instead of traditional cd commands. Features cross-platform support (Linux, macOS, WSL, Windows), dual-character labeling with ergonomic home-row keys, walkdir-based traversal with hidden file toggle, and j/k scroll navigation.',
     link: 'https://github.com/JoseMaurette1/jump',
-    video: '',
+    video: 'jump.mp4',
     id: 'project-1',
     techStack: [
       'Rust',
@@ -61,7 +61,7 @@ export const PROJECTS: Project[] = [
       'Shadcn/UI',
       'Cargo',
     ],
-    thumbnail: '',
+    thumbnail: 'jump.png',
   },
   {
     name: 'Spotbuds',
