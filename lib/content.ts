@@ -43,6 +43,27 @@ export type { Project, WorkExperience, SocialLink, Education, TechSkill }
 
 export const PROJECTS: Project[] = [
   {
+    name: 'Jump',
+    description:
+      'A Vim-inspired terminal directory navigation tool using Rust and TUI. Enables rapid filesystem traversal through deterministic two-character key sequences (AA, AS, AD...) instead of traditional cd commands. Features cross-platform support (Linux, macOS, WSL, Windows), dual-character labeling with ergonomic home-row keys, walkdir-based traversal with hidden file toggle, and j/k scroll navigation.',
+    link: 'https://github.com/JoseMaurette1/jump',
+    video: '',
+    id: 'project-1',
+    techStack: [
+      'Rust',
+      'Ratatui',
+      'Crossterm',
+      'Walkdir',
+      'React 19',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS 4',
+      'Shadcn/UI',
+      'Cargo',
+    ],
+    thumbnail: '',
+  },
+  {
     name: 'Spotbuds',
     description:
       'Spotbuds uses the Spotify API to give insights on your top artists, tracks, and genres. Create playlists and share your statistics. View your friends favorite artists and songs!.',
@@ -155,6 +176,7 @@ export const TECH_STACK: TechSkill[] = [
   { name: 'Node.js' },
   { name: 'Figma' },
   { name: 'Python' },
+  { name: 'Rust' },
   { name: 'JavaScript' },
 ]
 
