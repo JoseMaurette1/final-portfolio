@@ -44,7 +44,7 @@ export const PersonalStatsSection = () => {
       className="pb-8"
     >
       <motion.h3
-        className="mb-3 font-[family-name:var(--font-playfair-display)] text-lg font-medium"
+        className="mb-3 font-[family-name:var(--font-space-grotesk)] text-xl font-semibold text-zinc-900 dark:text-zinc-100"
         variants={ITEM_VARIANTS}
       >
         random facts

@@ -60,7 +60,7 @@ export const HeroSection = ({ profileImageUrl }: Props) => {
           variants={ITEM_VARIANTS}
           className="flex items-center gap-2"
         >
-          <h1 className="font-[family-name:var(--font-playfair-display)] text-xl font-medium text-zinc-900 dark:text-zinc-100">
+          <h1 className="font-[family-name:var(--font-space-grotesk)] text-xl font-semibold text-zinc-900 dark:text-zinc-100">
             jose maurette
           </h1>
           <BadgeCheck
@@ -70,33 +70,25 @@ export const HeroSection = ({ profileImageUrl }: Props) => {
           />
         </motion.div>
         <motion.p
-          className="max-w-prose font-[family-name:var(--font-dm-sans)] text-zinc-600 dark:text-zinc-400"
+          className="max-w-prose text-zinc-600 dark:text-zinc-400"
           variants={ITEM_VARIANTS}
         >
           i&apos;m a{' '}
-          <span className="font-bold text-zinc-900 dark:text-zinc-100">
+          <span className="text-zinc-900 dark:text-zinc-100">
             full stack developer
           </span>{' '}
           based in{' '}
-          <span className="font-bold text-zinc-900 dark:text-zinc-100">
-            miami, fl
-          </span>
-          .
+          <span className="text-zinc-900 dark:text-zinc-100">miami, fl</span>.
           <br />i build web apps with{' '}
-          <span className="font-bold text-zinc-900 dark:text-zinc-100">
+          <span className="text-zinc-900 dark:text-zinc-100">
             React, Typescript, Next.js
           </span>{' '}
           and{' '}
-          <span className="font-bold text-zinc-900 dark:text-zinc-100">
-            postgresql
-          </span>
-          . in my free time i learn about{' '}
-          <span className="font-bold text-zinc-900 dark:text-zinc-100">ai</span>
-          , play games, and go to the{' '}
-          <span className="font-bold text-zinc-900 dark:text-zinc-100">
-            gym
-          </span>
-          .
+          <span className="text-zinc-900 dark:text-zinc-100">postgresql</span>.
+          in my free time i learn about{' '}
+          <span className="text-zinc-900 dark:text-zinc-100">ai</span>, play
+          games, and go to the{' '}
+          <span className="text-zinc-900 dark:text-zinc-100">gym</span>.
         </motion.p>
 
         <motion.div

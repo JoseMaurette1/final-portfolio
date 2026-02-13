@@ -46,7 +46,7 @@ export const WorkExperienceSection = ({ jobs }: Props) => {
       animate="visible"
     >
       <motion.h3
-        className="mb-4 font-[family-name:var(--font-playfair-display)] text-lg font-medium"
+        className="mb-4 font-[family-name:var(--font-space-grotesk)] text-xl font-semibold text-zinc-900 dark:text-zinc-100"
         variants={ITEM_VARIANTS}
       >
         work experience

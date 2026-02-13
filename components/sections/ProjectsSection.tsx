@@ -49,7 +49,7 @@ export const ProjectsSection = ({ projects }: Props) => {
         className="mb-4 flex items-center justify-between"
         variants={ITEM_VARIANTS}
       >
-        <h3 className="font-[family-name:var(--font-playfair-display)] text-lg font-medium">
+        <h3 className="font-[family-name:var(--font-space-grotesk)] text-xl font-semibold text-zinc-900 dark:text-zinc-100">
           selected projects
         </h3>
         <Link

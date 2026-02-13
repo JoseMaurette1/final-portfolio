@@ -1,11 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import {
-  JetBrains_Mono,
-  Source_Sans_3,
-  Merriweather,
-  DM_Sans,
-  Playfair_Display,
-} from 'next/font/google'
+import { Geist, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
@@ -104,38 +98,16 @@ export const metadata: Metadata = {
   },
 }
 
-// Code font - Best for code snippets, technical content, and developer-focused elements
-const jetBrainsMono = JetBrains_Mono({
-  variable: '--font-jetbrains-mono',
+// Sans-serif font - Clean modern look for the entire site
+const geistSans = Geist({
+  variable: '--font-geist-sans',
   subsets: ['latin'],
   display: 'swap',
 })
 
-// Body text font - Best for readable content and paragraphs
-const sourceSans = Source_Sans_3({
-  variable: '--font-source-sans',
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-// Serif font - Best for quotes, testimonials, and special content sections
-const merriweather = Merriweather({
-  variable: '--font-merriweather',
-  subsets: ['latin'],
-  weight: ['300', '400', '700'],
-  display: 'swap',
-})
-
-// Professional, high-contrast serif for section headings
-const playfairDisplay = Playfair_Display({
-  variable: '--font-playfair-display',
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-// Clean modern sans-serif for body text and UI
-const dmSans = DM_Sans({
-  variable: '--font-dm-sans',
+// Display sans-serif for headings
+const spaceGrotesk = Space_Grotesk({
+  variable: '--font-space-grotesk',
   subsets: ['latin'],
   display: 'swap',
 })
@@ -151,10 +123,12 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body
-        className={`${dmSans.variable} ${jetBrainsMono.variable} ${sourceSans.variable} ${merriweather.variable} ${playfairDisplay.variable} overflow-x-hidden bg-white tracking-tight antialiased dark:bg-zinc-950`}
+        className={`${geistSans.variable} ${spaceGrotesk.variable} overflow-x-hidden bg-white font-[family-name:var(--font-geist-sans)] tracking-tight antialiased dark:bg-zinc-950`}
         style={{
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
+          fontFamily:
+            "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
         }}
       >
         <ThemeProvider
@@ -164,7 +138,7 @@ export default function RootLayout({
           defaultTheme="dark"
           forcedTheme="dark"
         >
-          <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter)]">
+          <div className="flex min-h-screen w-full flex-col">
             <FloatingElements />
             <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
               <Navbar />

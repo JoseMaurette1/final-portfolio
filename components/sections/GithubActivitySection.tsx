@@ -78,7 +78,7 @@ export const GithubActivitySection = () => {
   return (
     <motion.section initial="hidden" animate="visible" variants={ITEM_VARIANTS}>
       <div className="mb-4 flex items-center justify-between">
-        <h3 className="font-[family-name:var(--font-playfair-display)] text-lg font-medium">
+        <h3 className="font-[family-name:var(--font-space-grotesk)] text-xl font-semibold text-zinc-900 dark:text-zinc-100">
           github activity
         </h3>
         <Link
