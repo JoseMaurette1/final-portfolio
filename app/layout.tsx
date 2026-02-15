@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Space_Grotesk } from 'next/font/google'
+import { Geist, Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
-import { FloatingElements } from '@/components/ui/floating-elements'
 import { StructuredData } from '@/components/seo/structured-data'
 import { Navbar } from '@/components/ui/navbar'
 
@@ -112,6 +111,12 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap',
 })
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -123,7 +128,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body
-        className={`${geistSans.variable} ${spaceGrotesk.variable} overflow-x-hidden bg-white font-[family-name:var(--font-geist-sans)] tracking-tight antialiased dark:bg-zinc-950`}
+        className={`${geistSans.variable} ${spaceGrotesk.variable} ${inter.variable} overflow-x-hidden bg-white font-[family-name:var(--font-geist-sans)] tracking-tight antialiased dark:bg-zinc-950`}
         style={{
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
@@ -138,9 +143,14 @@ export default function RootLayout({
           defaultTheme="dark"
           forcedTheme="dark"
         >
-          <div className="flex min-h-screen w-full flex-col">
-            <FloatingElements />
-            <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
+          <div className="relative flex min-h-screen w-full flex-col">
+            {/* Left vertical line */}
+            <div className="absolute top-0 left-1/2 h-full w-px -translate-x-[28rem] border-l border-neutral-800" />
+
+            {/* Right vertical line */}
+            <div className="absolute top-0 left-1/2 h-full w-px translate-x-[28rem] border-l border-neutral-800" />
+
+            <div className="relative z-10 mx-auto w-full max-w-3xl flex-1 px-6 pt-8">
               <Navbar />
               {children}
               <Footer />

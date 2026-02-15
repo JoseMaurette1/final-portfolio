@@ -18,7 +18,7 @@ const ITEM_VARIANTS = {
 export const Navbar = () => {
   return (
     <motion.nav
-      className="absolute top-8 right-4 z-50 flex items-center gap-6"
+      className="mb-8 flex items-center justify-end gap-6"
       initial="hidden"
       animate="visible"
       variants={ITEM_VARIANTS}

@@ -41,7 +41,7 @@ export const GithubActivitySection = () => {
     async function fetchData() {
       try {
         const response = await fetch(
-          'https://github-contributions-api.jogruber.de/v4/JoseMaurette1?y=last',
+          'https://github-contributions-api.jogruber.de/v4/JoseMaurette1?y=2026',
         )
         const json = await response.json()
 
@@ -78,29 +78,29 @@ export const GithubActivitySection = () => {
   return (
     <motion.section initial="hidden" animate="visible" variants={ITEM_VARIANTS}>
       <div className="mb-4 flex items-center justify-between">
-        <h3 className="font-[family-name:var(--font-space-grotesk)] text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+        <h2 className="text-xs font-medium tracking-wider text-neutral-500 uppercase">
           github activity
-        </h3>
+        </h2>
         <Link
           href="https://github.com/JoseMaurette1"
           target="_blank"
-          className="flex items-center gap-1 text-sm text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+          className="flex items-center gap-1 text-sm text-zinc-600 underline decoration-zinc-300 underline-offset-4 transition-colors hover:text-zinc-900 hover:decoration-zinc-500 dark:text-zinc-400 dark:decoration-zinc-700 dark:hover:text-zinc-100 dark:hover:decoration-zinc-500"
         >
           <span>view profile</span>
           <ArrowRight size={14} />
         </Link>
       </div>
 
-      <div className="flex w-full justify-center overflow-hidden rounded-xl border border-zinc-100 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="flex w-full justify-center overflow-hidden border border-neutral-800 bg-neutral-900/30 p-6">
         <div className="w-full overflow-x-auto">
           {data.length > 0 ? (
             <ActivityCalendar
               data={data}
               theme={themeData}
               colorScheme="dark"
-              blockSize={8}
-              blockMargin={2}
-              fontSize={12}
+              blockSize={11}
+              blockMargin={3}
+              fontSize={14}
               hideColorLegend={false}
               hideTotalCount={false}
               labels={{
@@ -122,13 +122,13 @@ export const GithubActivitySection = () => {
                   'Nov',
                   'Dec',
                 ],
-                totalCount: '{{count}} contributions in the last year',
+                totalCount: '{{count}} contributions in 2026',
                 weekdays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
               }}
               showWeekdayLabels
             />
           ) : (
-            <div className="flex h-[130px] w-full items-center justify-center text-sm text-zinc-400">
+            <div className="flex h-[200px] w-full items-center justify-center text-sm text-zinc-400">
               Loading activity...
             </div>
           )}

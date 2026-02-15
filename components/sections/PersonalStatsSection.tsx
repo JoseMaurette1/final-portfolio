@@ -8,7 +8,7 @@ type Stat = {
 
 const STATS: Stat[] = [
   { label: 'weighted pull-ups', value: '60 lbs' },
-  { label: 'typing speed 15s', value: '152 wpm' },
+  { label: 'typing speed 15s', value: '155 wpm' },
   { label: 'typing speed 60s', value: '130 wpm' },
 ]
 
@@ -41,14 +41,14 @@ export const PersonalStatsSection = () => {
       variants={STAGGER_CONTAINER}
       initial="hidden"
       animate="visible"
-      className="pb-8"
+      className="pb-0"
     >
-      <motion.h3
-        className="mb-3 font-[family-name:var(--font-space-grotesk)] text-xl font-semibold text-zinc-900 dark:text-zinc-100"
+      <motion.h2
+        className="mb-3 text-xs font-medium tracking-wider text-neutral-500 uppercase"
         variants={ITEM_VARIANTS}
       >
         random facts
-      </motion.h3>
+      </motion.h2>
       <motion.div
         className="flex flex-col space-y-1"
         variants={STAGGER_CONTAINER}

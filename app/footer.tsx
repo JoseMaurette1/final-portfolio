@@ -6,7 +6,7 @@ import { LAYOUT_ANIMATIONS, HOVER_ANIMATIONS } from '@/lib/animations'
 export function Footer() {
   return (
     <motion.footer
-      className="mt-24 border-t border-zinc-100 px-0 py-4 dark:border-zinc-800"
+      className="mt-12 border-t border-neutral-800 px-0 py-4"
       variants={LAYOUT_ANIMATIONS.footer}
       initial="hidden"
       animate="visible"

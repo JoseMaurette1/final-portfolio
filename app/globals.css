@@ -218,3 +218,18 @@
     font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   }
 }
+
+/* Custom Cursor */
+@layer base {
+  * {
+    cursor: default;
+  }
+
+  a, button, [role="button"], input[type="submit"], input[type="button"] {
+    cursor: pointer;
+  }
+
+  input[type="text"], input[type="email"], textarea, select {
+    cursor: text;
+  }
+}
