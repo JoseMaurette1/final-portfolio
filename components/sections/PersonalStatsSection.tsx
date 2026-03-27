@@ -7,63 +7,41 @@ type Stat = {
 }
 
 const STATS: Stat[] = [
-  { label: 'weighted pull-ups', value: '60 lbs' },
+  { label: 'weighted pull-ups', value: '75 lbs' },
   { label: 'typing speed 15s', value: '155 wpm' },
   { label: 'typing speed 60s', value: '130 wpm' },
 ]
 
-const ITEM_VARIANTS = {
-  hidden: { opacity: 0, y: 10 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.4,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
-  },
+const ITEM = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.4 } },
 }
 
-const STAGGER_CONTAINER = {
+const STAGGER = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1,
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
 }
 
 export const PersonalStatsSection = () => {
   return (
-    <motion.section
-      variants={STAGGER_CONTAINER}
-      initial="hidden"
-      animate="visible"
-      className="pb-0"
-    >
-      <motion.h2
-        className="mb-3 text-xs font-medium tracking-wider text-neutral-500 uppercase"
-        variants={ITEM_VARIANTS}
+    <motion.section variants={STAGGER} initial="hidden" animate="visible">
+      <motion.p
+        variants={ITEM}
+        className="mb-7 text-xs tracking-[0.2em] text-[#444] uppercase"
       >
-        random facts
-      </motion.h2>
-      <motion.div
-        className="flex flex-col space-y-1"
-        variants={STAGGER_CONTAINER}
-      >
-        {STATS.map((stat, index) => (
-          <motion.p
-            key={index}
-            className="text-sm text-zinc-600 dark:text-zinc-400"
-            variants={ITEM_VARIANTS}
+        Random Facts
+      </motion.p>
+      <motion.div className="space-y-4" variants={STAGGER}>
+        {STATS.map((stat, i) => (
+          <motion.div
+            key={i}
+            className="flex items-baseline gap-2"
+            variants={ITEM}
           >
-            <span className="font-medium text-zinc-900 dark:text-zinc-200">
-              {stat.label}:
-            </span>{' '}
-            {stat.value}
-          </motion.p>
+            <span className="text-sm text-[#666]">{stat.label}</span>
+            <span className="flex-1 border-b border-dotted border-[#2a2a2a]" />
+            <span className="text-sm text-[#e8e4df]">{stat.value}</span>
+          </motion.div>
         ))}
       </motion.div>
     </motion.section>

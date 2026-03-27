@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import * as ReactActivityCalendar from 'react-activity-calendar'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 
 type ThemeInput = {
   light: [string, string, string, string, string]
@@ -64,8 +63,8 @@ export const GithubActivitySection = () => {
   if (!mounted) return null
 
   const themeData: ThemeInput = {
-    light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
-    dark: ['#27272a', '#006d32', '#26a641', '#39d353', '#39d353'],
+    light: ['#1a1a1a', '#2e2e2e', '#484848', '#747474', '#b0b0b0'],
+    dark: ['#1a1a1a', '#2e2e2e', '#484848', '#747474', '#b0b0b0'],
   }
 
   const ActivityCalendar =
@@ -77,30 +76,29 @@ export const GithubActivitySection = () => {
 
   return (
     <motion.section initial="hidden" animate="visible" variants={ITEM_VARIANTS}>
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-xs font-medium tracking-wider text-neutral-500 uppercase">
-          github activity
-        </h2>
+      <div className="mb-7 flex items-center justify-between">
+        <p className="text-xs tracking-[0.2em] text-[#444] uppercase">
+          Github Activity
+        </p>
         <Link
           href="https://github.com/JoseMaurette1"
           target="_blank"
-          className="flex items-center gap-1 text-sm text-zinc-600 underline decoration-zinc-300 underline-offset-4 transition-colors hover:text-zinc-900 hover:decoration-zinc-500 dark:text-zinc-400 dark:decoration-zinc-700 dark:hover:text-zinc-100 dark:hover:decoration-zinc-500"
+          className="text-sm text-[#444] transition-colors hover:text-[#e8e4df]"
         >
-          <span>view profile</span>
-          <ArrowRight size={14} />
+          view profile →
         </Link>
       </div>
 
-      <div className="flex w-full justify-center overflow-hidden border border-neutral-800 bg-neutral-900/30 p-6">
+      <div className="flex w-full justify-center overflow-hidden border border-[#1e1e1e] bg-[#0d0d0d] p-5">
         <div className="w-full overflow-x-auto">
           {data.length > 0 ? (
             <ActivityCalendar
               data={data}
               theme={themeData}
               colorScheme="dark"
-              blockSize={11}
+              blockSize={10}
               blockMargin={3}
-              fontSize={14}
+              fontSize={11}
               hideColorLegend={false}
               hideTotalCount={false}
               labels={{
@@ -128,8 +126,8 @@ export const GithubActivitySection = () => {
               showWeekdayLabels
             />
           ) : (
-            <div className="flex h-[200px] w-full items-center justify-center text-sm text-zinc-400">
-              Loading activity...
+            <div className="flex h-[160px] w-full items-center justify-center text-[10px] text-[#333]">
+              loading...
             </div>
           )}
         </div>

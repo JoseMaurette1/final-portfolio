@@ -1,24 +1,20 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Inter, Space_Grotesk } from 'next/font/google'
+import { Space_Mono } from 'next/font/google'
 import './globals.css'
-import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
 import { StructuredData } from '@/components/seo/structured-data'
-import { Navbar } from '@/components/ui/navbar'
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#ffffff',
+  themeColor: '#0a0a0a',
 }
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://maurette.vercel.app/'),
   alternates: {
     canonical: 'https://maurette.vercel.app/',
-    languages: {
-      'en-US': 'https://maurette.vercel.app/',
-    },
+    languages: { 'en-US': 'https://maurette.vercel.app/' },
   },
   title: {
     default:
@@ -26,7 +22,7 @@ export const metadata: Metadata = {
     template: '%s | Jose Maurette',
   },
   description:
-    'Jose Maurette is a Full Stack Developer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies. View portfolio, projects, and work experience.',
+    'Jose Maurette is a Full Stack Developer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies.',
   keywords: [
     'Jose Maurette',
     'Full Stack Developer',
@@ -34,36 +30,13 @@ export const metadata: Metadata = {
     'React Developer',
     'Next.js Developer',
     'TypeScript Developer',
-    'Frontend Developer',
-    'Backend Developer',
-    'JavaScript Developer',
-    'Web Development',
-    'Software Engineer',
     'Portfolio',
     'Miami Developer',
-    'Florida Developer',
     'FIU Computer Science',
-    'React Portfolio',
-    'Next.js Portfolio',
-    'Modern Web Development',
   ],
   authors: [{ name: 'Jose Maurette' }],
   creator: 'Jose Maurette',
-  publisher: 'Jose Maurette',
-  category: 'Technology',
-  classification: 'Portfolio',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-
+  robots: { index: true, follow: true },
   icons: {
     icon: '/background.png',
     shortcut: '/background.png',
@@ -73,16 +46,16 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://maurette.vercel.app/',
-    title: 'Jose Maurette - Full Stack Developer | React, Next.js, TypeScript',
+    title: 'Jose Maurette - Full Stack Developer',
     description:
-      'Jose Maurette is a Full Stack Developer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies.',
+      'Full Stack Developer specializing in React, Next.js, TypeScript.',
     siteName: 'Jose Maurette Portfolio',
     images: [
       {
         url: '/background.png',
         width: 1200,
         height: 630,
-        alt: 'Jose Maurette - Full Stack Developer Portfolio',
+        alt: 'Jose Maurette Portfolio',
       },
     ],
   },
@@ -90,51 +63,30 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Jose Maurette - Full Stack Developer',
     description:
-      'Jose Maurette is a Full Stack Developer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies.',
+      'Full Stack Developer specializing in React, Next.js, TypeScript.',
     images: ['/background.png'],
     creator: '@JoseMaurette1',
-    site: '@JoseMaurette1',
   },
 }
 
-// Sans-serif font - Clean modern look for the entire site
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const spaceMono = Space_Mono({
+  weight: ['400', '700'],
+  variable: '--font-space-mono',
   subsets: ['latin'],
   display: 'swap',
-})
-
-// Display sans-serif for headings
-const spaceGrotesk = Space_Grotesk({
-  variable: '--font-space-grotesk',
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
 })
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <StructuredData />
       </head>
       <body
-        className={`${geistSans.variable} ${spaceGrotesk.variable} ${inter.variable} overflow-x-hidden bg-white font-[family-name:var(--font-geist-sans)] tracking-tight antialiased dark:bg-zinc-950`}
-        style={{
-          scrollbarWidth: 'none',
-          msOverflowStyle: 'none',
-          fontFamily:
-            "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
-        }}
+        className={`${spaceMono.variable} bg-[#0a0a0a] font-[family-name:var(--font-space-mono)] antialiased`}
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         <ThemeProvider
           enableSystem={false}
@@ -143,19 +95,7 @@ export default function RootLayout({
           defaultTheme="dark"
           forcedTheme="dark"
         >
-          <div className="relative flex min-h-screen w-full flex-col">
-            {/* Left vertical line */}
-            <div className="absolute top-0 left-1/2 h-full w-px -translate-x-[28rem] border-l border-neutral-800" />
-
-            {/* Right vertical line */}
-            <div className="absolute top-0 left-1/2 h-full w-px translate-x-[28rem] border-l border-neutral-800" />
-
-            <div className="relative z-10 mx-auto w-full max-w-3xl flex-1 px-6 pt-8">
-              <Navbar />
-              {children}
-              <Footer />
-            </div>
-          </div>
+          {children}
         </ThemeProvider>
       </body>
     </html>

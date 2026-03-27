@@ -1,95 +1,111 @@
 'use client'
 import { motion } from 'motion/react'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
-import { PROJECTS } from '@/lib/content'
-import { ProjectVideoDialog } from '@/components/ui/project-video-dialog'
+import { ArrowUpRight } from 'lucide-react'
+import { PROJECTS, RESUME_URL } from '@/lib/content'
 
-const ITEM_VARIANTS = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
-  },
+const FADE = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
 }
 
-const STAGGER_CONTAINER = {
+const STAGGER = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.1,
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.06 } },
 }
 
 export default function ProjectsPage() {
   return (
-    <motion.main
-      className="py-8"
+    <motion.div
+      className="mx-auto min-h-screen max-w-[1100px] border-x border-[#1e1e1e]"
       initial="hidden"
       animate="visible"
-      variants={STAGGER_CONTAINER}
+      variants={STAGGER}
     >
-      <motion.div className="mb-8" variants={ITEM_VARIANTS}>
+      {/* Top bar */}
+      <motion.div
+        variants={FADE}
+        className="flex items-center justify-between border-b border-[#1e1e1e] px-8 py-5"
+      >
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-sm text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+          className="text-sm text-[#555] transition-colors hover:text-[#e8e4df]"
         >
-          <ArrowLeft size={14} />
-          <span>back</span>
+          ← Jose Maurette
         </Link>
+        <a
+          href={RESUME_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-[#555] transition-colors hover:text-[#e8e4df]"
+        >
+          resume
+        </a>
       </motion.div>
 
-      <motion.h1
-        className="mb-8 font-[family-name:var(--font-playfair-display)] text-2xl font-medium"
-        variants={ITEM_VARIANTS}
+      {/* Section header */}
+      <motion.div
+        variants={FADE}
+        className="border-b border-[#1e1e1e] px-8 py-5"
       >
-        projects
-      </motion.h1>
+        <p className="text-xs tracking-[0.2em] text-[#444] uppercase">
+          All Projects
+        </p>
+      </motion.div>
 
-      <motion.div className="flex flex-col gap-8" variants={STAGGER_CONTAINER}>
-        {PROJECTS.map((project) => (
-          <motion.div
+      {/* Projects grid */}
+      <motion.div
+        variants={STAGGER}
+        className="grid grid-cols-1 sm:grid-cols-2"
+      >
+        {PROJECTS.map((project, i) => (
+          <motion.a
             key={project.id}
-            className="overflow-hidden rounded-xl border border-zinc-200 bg-zinc-50 p-3 dark:border-zinc-800 dark:bg-zinc-900/50"
-            variants={ITEM_VARIANTS}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            variants={FADE}
+            className={[
+              'group flex flex-col gap-5 border-b border-[#1e1e1e] p-8',
+              'transition-all duration-150',
+              'hover:bg-[#0f0f0f] hover:shadow-[inset_0_0_0_1px_#2d2d2d]',
+              i % 2 === 0 ? 'sm:border-r' : '',
+            ].join(' ')}
           >
-            <ProjectVideoDialog
-              src={project.video}
-              title={project.name}
-              description={project.description}
-              techStack={project.techStack}
-              link={project.link}
-            />
-            <div className="mt-3 px-1">
-              <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
+            <div className="flex items-start justify-between">
+              <span className="text-sm text-[#333] transition-colors group-hover:text-[#555]">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <ArrowUpRight
+                size={15}
+                className="text-[#444] opacity-0 transition-opacity group-hover:opacity-100"
+              />
+            </div>
+            <div>
+              <p className="text-base font-bold text-[#e8e4df]">
                 {project.name}
-              </h2>
-              <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+              </p>
+              <p className="mt-2.5 text-sm leading-relaxed text-[#666] transition-colors group-hover:text-[#888]">
                 {project.description}
               </p>
-              {project.techStack && project.techStack.length > 0 && (
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {project.techStack.map((tech) => (
-                    <span
-                      key={`${project.id}-${tech}`}
-                      className="rounded-full border border-zinc-200 bg-white px-2.5 py-0.5 text-xs text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              )}
             </div>
-          </motion.div>
+            <p className="mt-auto text-xs text-[#3a3a3a] transition-colors group-hover:text-[#4a4a4a]">
+              {project.techStack?.join(' · ')}
+            </p>
+          </motion.a>
         ))}
       </motion.div>
-    </motion.main>
+
+      {/* Footer */}
+      <motion.div
+        variants={FADE}
+        className="flex items-center justify-between border-t border-[#1e1e1e] px-8 py-5"
+      >
+        <span className="text-xs text-[#2e2e2e]">
+          © {new Date().getFullYear()} Jose Maurette
+        </span>
+        <span className="text-xs text-[#2e2e2e]">Built with Next.js</span>
+      </motion.div>
+    </motion.div>
   )
 }
