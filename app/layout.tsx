@@ -1,13 +1,15 @@
 import type { Metadata, Viewport } from 'next'
-import { Space_Mono } from 'next/font/google'
-import './globals.css'
-import { ThemeProvider } from 'next-themes'
+import { Caveat, Geist, Geist_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
+import { CustomCursor } from '@/components/cursor'
 import { StructuredData } from '@/components/seo/structured-data'
+import { ThemeProvider } from '@/components/theme-provider'
+import './globals.css'
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#0a0a0a',
+  themeColor: '#111110',
 }
 
 export const metadata: Metadata = {
@@ -69,34 +71,77 @@ export const metadata: Metadata = {
   },
 }
 
-const spaceMono = Space_Mono({
-  weight: ['400', '700'],
-  variable: '--font-space-mono',
+const geistSans = Geist({
+  variable: '--font-geist-sans',
   subsets: ['latin'],
-  display: 'swap',
+})
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
+
+const caveat = Caveat({
+  variable: '--font-caveat',
+  subsets: ['latin'],
+})
+
+const redactionSerif = localFont({
+  src: [
+    {
+      path: '../public/fonts/Redaction35-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-redaction-serif',
+})
+
+const openRunde = localFont({
+  src: [
+    {
+      path: '../public/fonts/OpenRunde-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/OpenRunde-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/OpenRunde-Semibold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/OpenRunde-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-open-runde',
 })
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
+      className="overscroll-none"
+    >
       <head>
         <StructuredData />
       </head>
       <body
-        className={`${spaceMono.variable} bg-[#0a0a0a] font-[family-name:var(--font-space-mono)] antialiased`}
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} ${openRunde.variable} ${redactionSerif.variable} font-open-runde min-h-dvh overscroll-none antialiased`}
+        suppressHydrationWarning
       >
-        <ThemeProvider
-          enableSystem={false}
-          attribute="class"
-          storageKey="theme"
-          defaultTheme="dark"
-          forcedTheme="dark"
-        >
-          {children}
-        </ThemeProvider>
+        <CustomCursor />
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   )

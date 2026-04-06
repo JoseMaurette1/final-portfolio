@@ -11,7 +11,7 @@ export default function NotFound() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="font-[family-name:var(--font-playfair-display)] text-4xl font-medium"
+        className="font-open-runde text-4xl font-medium"
       >
         404
       </motion.h1>

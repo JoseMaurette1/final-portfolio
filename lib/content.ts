@@ -1,25 +1,9 @@
 type Project = {
   name: string
-  description: string
   link: string
   video: string
   id: string
-  techStack?: string[]
-  thumbnail?: string
-}
-
-type WorkExperience = {
-  company: string
-  video?: string
-  thumbnail?: string
-  title: string
-  start: string
-  end: string
-  location?: string
-  link: string
-  id: string
-  description?: string
-  techStack?: string[]
+  date: string
 }
 
 type SocialLink = {
@@ -27,113 +11,43 @@ type SocialLink = {
   link: string
 }
 
-type Education = {
-  institution: string
-  degree: string
-  start: string
-  end: string
-  id: string
-}
-
-type TechSkill = {
-  name: string
-}
-
-export type { Project, WorkExperience, SocialLink, Education, TechSkill }
+export type { Project, SocialLink }
 
 export const PROJECTS: Project[] = [
   {
     name: 'Jump',
-    description:
-      'Built Rust CLI with TUI enabling rapid filesystem traversal via fuzzy search and vim keybindings (hjkl) eliminating cd friction. Architected bookmark persistence using SQLite for instant directory recall across termianl sessions. Developed cross-platform TUI with ratatui/corsster for Linux, MacOs, WSL, Windows; handles raw terminal mode and signal recovery. Built CI/CD pipelines deploying static binaries to Github Releases (Rust, Ratatui, Crossterm, SQlite)',
     link: 'https://vimjump.vercel.app',
     video: 'jump.mp4',
     id: 'project-1',
-    techStack: [
-      'Rust',
-      'Ratatui',
-      'Crossterm',
-      'Cargo',
-      'Walkdir',
-      'React.js',
-      'TypeScript',
-      'Vite',
-      'TailwindCSS',
-      'Shadcn/UI',
-    ],
-    thumbnail: 'jump.png',
-  },
-  {
-    name: 'Spotbuds',
-    description:
-      'Spotbuds uses the Spotify API to give insights on your top artists, tracks, and genres. Create playlists and share your statistics. View your friends favorite artists and songs!.',
-    link: 'https://spotbuds.vercel.app/',
-    video: 'spotbuds.mp4',
-    id: 'project0',
-    techStack: [
-      'Next.js',
-      'React',
-      'TypeScript',
-      'Spotify API',
-      'OAuth',
-      'Neon',
-      'Prisma',
-    ],
-    thumbnail: 'spotbuds.png',
+    date: '2026',
   },
   {
     name: 'Macrotrue',
-    description:
-      'Macrotrue is a platform that curates macro recipes based on your goals and preferences.',
     link: 'https://macrotrue.vercel.app/',
     video: 'macrotrue.mp4',
     id: 'project1',
-    techStack: ['Next.js', 'React', 'TypeScript', 'Neon', 'Clerk', 'OpenAI'],
-    thumbnail: '',
+    date: '2025-2026',
   },
   {
-    name: 'Always',
-    description:
-      'Full Stack Workout Tracker that helps you track your workouts and progress.',
-    link: 'https://alwaysv1.vercel.app/',
-    video: 'always.mp4',
-    id: 'project2',
-    techStack: ['Next.js', 'React', 'TypeScript', 'Supabase'],
-    thumbnail: '',
+    name: 'Spotbuds',
+    link: 'https://spotbuds.vercel.app/',
+    video: 'spotbuds.mp4',
+    id: 'project0',
+    date: '2025',
   },
   {
     name: 'TrailTales',
-    description:
-      'A web app that helps you find the best trails for your next adventure.',
     link: 'https://trailtales.vercel.app/',
     video: 'tt.mp4',
     id: 'project3',
-    techStack: ['Next.js', 'React', 'TypeScript'],
-    thumbnail: '',
+    date: '2024',
   },
-]
-
-export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Kontaktsource',
-    video: '/ksource.mp4',
-    thumbnail: '/ksource.png',
-    title: 'Web Developer Intern',
-    start: 'June 2025',
-    end: 'August 2025',
-    location: 'Miami, FL',
-    link: 'https://kontaktsource.com',
-    id: 'work1',
-    description:
-      'Shipped UX-focused features that helped increase client acquisition by 13%. Modernized the front-end architecture with responsive, component-driven UI. Led and mentored a 3-person team to deliver high‑quality releases on time. Managed 70+ client relationships, translating requirements into solutions and resolving bugs and requests. Improved legacy code performance, maintainability, and SEO, raising engagement by 68%.',
-    techStack: [
-      'WordPress',
-      'JavaScript',
-      'PHP',
-      'HTML',
-      'Tailwind CSS',
-      'Figma',
-    ],
+    name: 'Always',
+    link: 'https://alwaysv1.vercel.app/',
+    video: 'always.mp4',
+    id: 'project2',
+    date: '2024',
   },
 ]
 
@@ -149,37 +63,5 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ]
 
 export const EMAIL = 'josemaurette1234@gmail.com'
-
-export const EDUCATION: Education[] = [
-  {
-    institution: 'Florida International University',
-    degree: 'Masters of Science in Computer Science',
-    start: 'Starting Summer 2026',
-    end: '',
-    id: 'education1',
-  },
-  {
-    institution: 'Florida International University',
-    degree: 'Bachelor of Art in Computer Science',
-    start: 'August 2022',
-    end: 'December 2025',
-    id: 'education2',
-  },
-]
-
-export const TECH_STACK: TechSkill[] = [
-  { name: 'Next.js' },
-  { name: 'React' },
-  { name: 'TypeScript' },
-  { name: 'Tailwind CSS' },
-  { name: 'Postgresql' },
-  { name: 'Node.js' },
-  { name: 'Figma' },
-  { name: 'Python' },
-  { name: 'Rust' },
-  { name: 'JavaScript' },
-]
-
-export const PROFILE_IMAGE_URL = '/pfp.jpg'
 
 export const RESUME_URL = '/resume.pdf'

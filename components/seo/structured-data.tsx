@@ -12,7 +12,6 @@ export const StructuredData = () => {
     sameAs: [
       'https://github.com/JoseMaurette1',
       'https://www.linkedin.com/in/maurette',
-      'https://www.instagram.com/hose_04',
     ],
     knowsAbout: [
       'React',
@@ -28,16 +27,6 @@ export const StructuredData = () => {
       'Node.js',
       'Git',
     ],
-    alumniOf: {
-      '@type': 'Organization',
-      name: 'Florida International University',
-      url: 'https://www.fiu.edu',
-    },
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Kontaktsource',
-      url: 'https://kontaktsource.com',
-    },
     image: 'https://maurette.vercel.app/background.png',
     email: 'josemaurette1234@gmail.com',
     address: {
