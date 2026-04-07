@@ -176,8 +176,8 @@ export function Hero() {
           transition={{ ease: 'easeOut', duration: 0.8, bounce: 0, delay: 0.1 }}
           className="text-muted-foreground font-medium"
         >
-          I&apos;m a <span className="text-primary">graduate student @fiu</span>{' '}
-          building with React, Next.js, TypeScript.
+          I build production <span className="text-primary">AI Systems</span>{' '}
+          with <span className="text-primary">LLM Integration</span>.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, filter: 'blur(5px)', y: 8 }}
@@ -185,23 +185,40 @@ export function Hero() {
           transition={{ ease: 'easeOut', duration: 0.8, bounce: 0, delay: 0.2 }}
           className="text-muted-foreground font-medium"
         >
-          I created{' '}
-          <ProjectTextLink href={featuredProjects[0].link}>
-            Jump
-          </ProjectTextLink>
-          , and{' '}
+          I built{' '}
           <ProjectTextLink href={featuredProjects[2].link}>
             Macrotrue
           </ProjectTextLink>
-          , and I spend most of my time building{' '}
+          , an AI-driven SaaS integrating Groq API (LLaMA 3.3-70B) for meal
+          planning and conversational AI.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, filter: 'blur(5px)', y: 8 }}
+          animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+          transition={{
+            ease: 'easeOut',
+            duration: 0.8,
+            bounce: 0,
+            delay: 0.25,
+          }}
+          className="text-muted-foreground font-medium"
+        >
+          Also shipped{' '}
+          <ProjectTextLink href={featuredProjects[0].link}>
+            Jump
+          </ProjectTextLink>
+          , a terminal CLI in Rust, and{' '}
+          <ProjectTextLink href={featuredProjects[1].link}>
+            SpotBuds
+          </ProjectTextLink>
+          , a Spotify analytics platform with OAuth 2.0 auth.{' '}
           <Link
             href="/projects"
-            className="text-primary inline-flex items-baseline gap-1 align-baseline underline underline-offset-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=size-])]:size-4"
+            className="text-primary pt-2 inline-flex items-baseline gap-1 align-baseline underline underline-offset-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=size-])]:size-4"
           >
             <FolderKanban aria-hidden className="my-auto" />
-            projects
+           Check out more projects
           </Link>{' '}
-          that solve problems.
         </motion.p>
       </div>
 

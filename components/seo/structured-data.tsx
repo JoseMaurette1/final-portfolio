@@ -5,9 +5,9 @@ export const StructuredData = () => {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Jose Maurette',
-    jobTitle: 'Full Stack Developer',
+    jobTitle: 'AI Engineer',
     description:
-      'Full Stack Developer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies.',
+      'AI Engineer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies.',
     url: 'https://maurette.vercel.app',
     sameAs: [
       'https://github.com/JoseMaurette1',
@@ -43,7 +43,7 @@ export const StructuredData = () => {
     name: 'Jose Maurette Portfolio',
     url: 'https://maurette.vercel.app',
     description:
-      'Personal portfolio website of Jose Maurette, a Full Stack Developer specializing in React, Next.js, and TypeScript.',
+      'Personal portfolio website of Jose Maurette, a AI Engineer specializing in React, Next.js, and TypeScript.',
     author: {
       '@type': 'Person',
       name: 'Jose Maurette',

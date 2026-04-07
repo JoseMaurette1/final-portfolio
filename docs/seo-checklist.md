@@ -3,7 +3,7 @@
 ## ✅ **Implemented SEO Features**
 
 ### **1. Enhanced Metadata**
-- ✅ **Optimized title**: "Jose Maurette - Full Stack Developer | React, Next.js, TypeScript"
+- ✅ **Optimized title**: "Jose Maurette - AI Engineer | React, Next.js, TypeScript"
 - ✅ **Comprehensive description**: Includes skills and call-to-action
 - ✅ **Expanded keywords**: 18 targeted keywords for better discoverability
 - ✅ **Category & classification**: Technology/Portfolio for better categorization
@@ -103,7 +103,7 @@ verification: {
 
 ### **Primary Keywords**
 - "Jose Maurette"
-- "Full Stack Developer"
+- "AI Engineer"
 - "React Developer"
 - "Next.js Developer"
 
@@ -114,7 +114,7 @@ verification: {
 - "Modern web development"
 
 ### **Long-tail Keywords**
-- "Full Stack Developer Miami"
+- "AI Engineer Miami"
 - "React Next.js TypeScript developer"
 - "Web developer portfolio"
 - "Modern web applications developer"

@@ -19,15 +19,14 @@ export const metadata: Metadata = {
     languages: { 'en-US': 'https://maurette.vercel.app/' },
   },
   title: {
-    default:
-      'Jose Maurette - Full Stack Developer | React, Next.js, TypeScript',
+    default: 'Jose Maurette - AI Engineer | React, Next.js, TypeScript',
     template: '%s | Jose Maurette',
   },
   description:
-    'Jose Maurette is a Full Stack Developer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies.',
+    'Jose Maurette is a AI Engineer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies.',
   keywords: [
     'Jose Maurette',
-    'Full Stack Developer',
+    'AI Engineer',
     'Web Developer',
     'React Developer',
     'Next.js Developer',
@@ -48,9 +47,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://maurette.vercel.app/',
-    title: 'Jose Maurette - Full Stack Developer',
-    description:
-      'Full Stack Developer specializing in React, Next.js, TypeScript.',
+    title: 'Jose Maurette - AI Engineer',
+    description: 'AI Engineer specializing in React, Next.js, TypeScript.',
     siteName: 'Jose Maurette Portfolio',
     images: [
       {
@@ -63,9 +61,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jose Maurette - Full Stack Developer',
-    description:
-      'Full Stack Developer specializing in React, Next.js, TypeScript.',
+    title: 'Jose Maurette - AI Engineer',
+    description: 'AI Engineer specializing in React, Next.js, TypeScript.',
     images: ['/background.png'],
     creator: '@JoseMaurette1',
   },
