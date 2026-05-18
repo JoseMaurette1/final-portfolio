@@ -11,7 +11,14 @@ type SocialLink = {
   link: string
 }
 
-export type { Project, SocialLink }
+type Experience = {
+  company: string
+  role: string
+  period: string
+  link?: string
+}
+
+export type { Project, SocialLink, Experience }
 
 export const PROJECTS: Project[] = [
   {
@@ -48,6 +55,21 @@ export const PROJECTS: Project[] = [
     video: 'always.mp4',
     id: 'project2',
     date: '2024',
+  },
+]
+
+export const EXPERIENCE: Experience[] = [
+  {
+    company: 'Zensah',
+    role: 'Agentic AI Engineer Intern',
+    period: 'May 2026 — Present',
+    link: 'https://zensah.com',
+  },
+  {
+    company: 'Kontaktsource',
+    role: 'Frontend Developer Intern',
+    period: 'June 2025 - August 2025',
+    link: 'https://kontaktsource.com',
   },
 ]
 

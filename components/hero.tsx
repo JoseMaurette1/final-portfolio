@@ -19,7 +19,7 @@ import { Menu } from '@base-ui/react/menu'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { siteConfig } from '@/config/site'
-import { PROJECTS } from '@/lib/content'
+import { EXPERIENCE, PROJECTS } from '@/lib/content'
 
 const heroIcons = [Terminal, Rocket]
 
@@ -258,6 +258,40 @@ export function Hero() {
           </AnimatePresence>
           <span className="font-medium">Copy Email</span>
         </Button>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, filter: 'blur(5px)', y: 8 }}
+        animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+        transition={{ ease: 'easeOut', duration: 0.8, bounce: 0, delay: 0.35 }}
+        className="flex flex-col gap-2"
+      >
+        <span className="text-muted-foreground text-xs font-medium uppercase tracking-widest">
+          Experience
+        </span>
+        <div className="flex flex-col gap-2">
+          {EXPERIENCE.map((job) => (
+            <div key={job.company + job.period} className="flex items-baseline justify-between gap-2">
+              <div className="flex flex-col">
+                {job.link ? (
+                  <Link
+                    href={job.link}
+                    target="_blank"
+                    className="text-primary font-medium underline underline-offset-2"
+                  >
+                    {job.company}
+                  </Link>
+                ) : (
+                  <span className="text-primary font-medium">{job.company}</span>
+                )}
+                <span className="text-muted-foreground text-sm">{job.role}</span>
+              </div>
+              <span className="text-muted-foreground shrink-0 text-sm tabular-nums">
+                {job.period}
+              </span>
+            </div>
+          ))}
+        </div>
       </motion.div>
     </div>
   )
