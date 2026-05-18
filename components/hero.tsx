@@ -19,7 +19,7 @@ import { Menu } from '@base-ui/react/menu'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { siteConfig } from '@/config/site'
-import { EXPERIENCE, PROJECTS } from '@/lib/content'
+import { EDUCATION, EXPERIENCE, PROJECTS } from '@/lib/content'
 
 const heroIcons = [Terminal, Rocket]
 
@@ -260,6 +260,7 @@ export function Hero() {
         </Button>
       </motion.div>
 
+      <div className="my-2 h-px bg-border" />
       <motion.div
         initial={{ opacity: 0, filter: 'blur(5px)', y: 8 }}
         animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
@@ -288,6 +289,32 @@ export function Hero() {
               </div>
               <span className="text-muted-foreground shrink-0 text-sm tabular-nums">
                 {job.period}
+              </span>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      <div className="my-2 h-px bg-border" />
+
+      <motion.div
+        initial={{ opacity: 0, filter: 'blur(5px)', y: 8 }}
+        animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+        transition={{ ease: 'easeOut', duration: 0.8, bounce: 0, delay: 0.4 }}
+        className="flex flex-col gap-2"
+      >
+        <span className="text-muted-foreground text-xs font-medium uppercase tracking-widest">
+          Education
+        </span>
+        <div className="flex flex-col gap-2">
+          {EDUCATION.map((edu) => (
+            <div key={edu.institution + edu.period} className="flex items-baseline justify-between gap-2">
+              <div className="flex flex-col">
+                <span className="text-primary font-medium">{edu.institution}</span>
+                <span className="text-muted-foreground text-sm">{edu.degree}</span>
+              </div>
+              <span className="text-muted-foreground shrink-0 text-sm tabular-nums">
+                {edu.period}
               </span>
             </div>
           ))}

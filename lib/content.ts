@@ -18,7 +18,13 @@ type Experience = {
   link?: string
 }
 
-export type { Project, SocialLink, Experience }
+type Education = {
+  institution: string
+  degree: string
+  period: string
+}
+
+export type { Project, SocialLink, Experience, Education }
 
 export const PROJECTS: Project[] = [
   {
@@ -70,6 +76,19 @@ export const EXPERIENCE: Experience[] = [
     role: 'Frontend Developer Intern',
     period: 'June 2025 - August 2025',
     link: 'https://kontaktsource.com',
+  },
+]
+
+export const EDUCATION: Education[] = [
+  {
+    institution: 'Florida International University',
+    degree: 'M.S. Computer Science',
+    period: 'May 2026 - Present',
+  },
+  {
+    institution: 'Florida International University',
+    degree: 'B.A. Computer Science',
+    period: '2022 - 2025',
   },
 ]
 
