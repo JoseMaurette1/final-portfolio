@@ -73,7 +73,7 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     company: 'Kontaktsource',
-    role: 'Frontend Developer Intern',
+    role: 'Fullstack Developer Intern',
     period: 'June 2025 - August 2025',
     link: 'https://kontaktsource.com',
   },
