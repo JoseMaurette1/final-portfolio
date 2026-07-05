@@ -19,7 +19,7 @@ import { Menu } from '@base-ui/react/menu'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { siteConfig } from '@/config/site'
-import { EDUCATION, EXPERIENCE, PROJECTS } from '@/lib/content'
+import { EDUCATION, EXPERIENCE, PROJECTS, SKILLS } from '@/lib/content'
 
 const heroIcons = [Terminal, Rocket]
 
@@ -48,6 +48,7 @@ function ProjectTextLink({
 export function Hero() {
   const [isCopied, setIsCopied] = useState(false)
   const [iconIndex, setIconIndex] = useState(0)
+  const [activeSkillGroup, setActiveSkillGroup] = useState(0)
   const copyTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
@@ -185,12 +186,10 @@ export function Hero() {
           transition={{ ease: 'easeOut', duration: 0.8, bounce: 0, delay: 0.2 }}
           className="text-muted-foreground font-medium"
         >
-          I built{' '}
-          <ProjectTextLink href={featuredProjects[2].link}>
-            Macrotrue
-          </ProjectTextLink>
-          , an AI-driven SaaS integrating Groq API (LLaMA 3.3-70B) for meal
-          planning and conversational AI.
+          At{' '}
+          <ProjectTextLink href="https://zensah.com">Zensah</ProjectTextLink>,
+          I lead a 3-person team shipping a multi-agent LLM platform (Claude +
+          GPT) across ads analytics, content generation, and ops tooling.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, filter: 'blur(5px)', y: 8 }}
@@ -203,15 +202,19 @@ export function Hero() {
           }}
           className="text-muted-foreground font-medium"
         >
-          Also shipped{' '}
+          Also built{' '}
+          <ProjectTextLink href={featuredProjects[2].link}>
+            Macrotrue
+          </ProjectTextLink>
+          ,{' '}
           <ProjectTextLink href={featuredProjects[0].link}>
             Jump
           </ProjectTextLink>
-          , a terminal CLI in Rust, and{' '}
+          , and{' '}
           <ProjectTextLink href={featuredProjects[1].link}>
             SpotBuds
           </ProjectTextLink>
-          , a Spotify analytics platform with OAuth 2.0 auth.{' '}
+          .{' '}
           <Link
             href="/projects"
             className="text-primary pt-2 inline-flex items-baseline gap-1 align-baseline underline underline-offset-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=size-])]:size-4"
@@ -301,6 +304,54 @@ export function Hero() {
         initial={{ opacity: 0, filter: 'blur(5px)', y: 8 }}
         animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
         transition={{ ease: 'easeOut', duration: 0.8, bounce: 0, delay: 0.4 }}
+        className="flex flex-col gap-2"
+      >
+        <span className="text-muted-foreground text-xs font-medium uppercase tracking-widest">
+          Skills
+        </span>
+        <div className="flex gap-1.5 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {SKILLS.map((group, index) => (
+            <button
+              key={group.label}
+              type="button"
+              onClick={() => setActiveSkillGroup(index)}
+              className={`shrink-0 cursor-pointer rounded-full border px-3 py-1 text-xs font-medium whitespace-nowrap transition-colors ${
+                activeSkillGroup === index
+                  ? 'border-transparent bg-primary text-primary-foreground'
+                  : 'border-border text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              {group.label}
+            </button>
+          ))}
+        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeSkillGroup}
+            initial={{ opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -4 }}
+            transition={{ ease: 'easeOut', duration: 0.2 }}
+            className="flex flex-wrap gap-1.5"
+          >
+            {SKILLS[activeSkillGroup].items.map((item) => (
+              <span
+                key={item}
+                className="rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground"
+              >
+                {item}
+              </span>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+      </motion.div>
+
+      <div className="my-2 h-px bg-border" />
+
+      <motion.div
+        initial={{ opacity: 0, filter: 'blur(5px)', y: 8 }}
+        animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+        transition={{ ease: 'easeOut', duration: 0.8, bounce: 0, delay: 0.45 }}
         className="flex flex-col gap-2"
       >
         <span className="text-muted-foreground text-xs font-medium uppercase tracking-widest">

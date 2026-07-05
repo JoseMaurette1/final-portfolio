@@ -24,7 +24,12 @@ type Education = {
   period: string
 }
 
-export type { Project, SocialLink, Experience, Education }
+type SkillGroup = {
+  label: string
+  items: string[]
+}
+
+export type { Project, SocialLink, Experience, Education, SkillGroup }
 
 export const PROJECTS: Project[] = [
   {
@@ -68,7 +73,7 @@ export const EXPERIENCE: Experience[] = [
   {
     company: 'Zensah',
     role: 'Agentic AI Engineer Intern',
-    period: 'May 2026 — Present',
+    period: 'May 2026 - August 2026',
     link: 'https://zensah.com',
   },
   {
@@ -89,6 +94,47 @@ export const EDUCATION: Education[] = [
     institution: 'Florida International University',
     degree: 'B.A. Computer Science',
     period: '2022 - 2025',
+  },
+]
+
+export const SKILLS: SkillGroup[] = [
+  {
+    label: 'Agent Orchestration',
+    items: [
+      'Claude API',
+      'OpenAI API',
+      'Multi-Agent Systems',
+      'Tool Calling',
+      'RAG',
+      'Prompt Engineering',
+      'Agent Memory & Skills Systems',
+      'Guardrails',
+    ],
+  },
+  {
+    label: 'MCP & Integrations',
+    items: ['Model Context Protocol (MCP)', 'Shopify API', 'Amazon SP-API', 'Vercel AI SDK'],
+  },
+  {
+    label: 'Backend & Networking',
+    items: [
+      'Python',
+      'REST',
+      'SSE/Streaming',
+      'ETL Pipelines',
+      'Async/Background Job Orchestration',
+      'Node.js',
+      'PostgreSQL',
+      'Supabase',
+    ],
+  },
+  {
+    label: 'Infrastructure & DevOps',
+    items: ['macOS launchd', 'GitHub Actions CI/CD', 'Cron Orchestration'],
+  },
+  {
+    label: 'Frontend',
+    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
   },
 ]
 

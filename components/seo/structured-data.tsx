@@ -7,25 +7,27 @@ export const StructuredData = () => {
     name: 'Jose Maurette',
     jobTitle: 'AI Engineer',
     description:
-      'AI Engineer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies.',
+      'AI Engineer building production multi-agent LLM systems. Specializing in agent orchestration, tool calling, RAG, and Model Context Protocol (MCP) integrations.',
     url: 'https://maurette.vercel.app',
     sameAs: [
       'https://github.com/JoseMaurette1',
       'https://www.linkedin.com/in/maurette',
     ],
     knowsAbout: [
+      'Agentic AI',
+      'Multi-Agent Systems',
+      'Claude API',
+      'OpenAI API',
+      'Model Context Protocol (MCP)',
+      'Retrieval-Augmented Generation (RAG)',
+      'Tool Calling',
+      'Prompt Engineering',
       'React',
       'Next.js',
       'TypeScript',
-      'JavaScript',
-      'Web Development',
-      'Frontend Development',
-      'Backend Development',
-      'Tailwind CSS',
-      'Framer Motion',
-      'Supabase',
+      'Python',
       'Node.js',
-      'Git',
+      'PostgreSQL',
     ],
     image: 'https://maurette.vercel.app/background.png',
     email: 'josemaurette1234@gmail.com',
@@ -43,7 +45,7 @@ export const StructuredData = () => {
     name: 'Jose Maurette Portfolio',
     url: 'https://maurette.vercel.app',
     description:
-      'Personal portfolio website of Jose Maurette, a AI Engineer specializing in React, Next.js, and TypeScript.',
+      'Personal portfolio website of Jose Maurette, an AI Engineer specializing in agentic AI and multi-agent LLM systems.',
     author: {
       '@type': 'Person',
       name: 'Jose Maurette',
@@ -62,10 +64,12 @@ export const StructuredData = () => {
       '@type': 'Person',
       name: 'Jose Maurette',
     },
-    description: 'Portfolio showcasing web development projects and skills',
+    description:
+      'Portfolio showcasing agentic AI and multi-agent LLM system projects',
     url: 'https://maurette.vercel.app',
     genre: 'Portfolio',
-    keywords: 'web development, react, next.js, typescript, portfolio',
+    keywords:
+      'agentic ai, multi-agent systems, llm engineering, react, next.js, typescript, portfolio',
   }
 
   return (

@@ -9,7 +9,7 @@ export const siteConfig = {
   title: 'AI Engineer',
   email: EMAIL,
   description:
-    'Jose Maurette is a AI Engineer focused on creating intuitive and performant web experiences.',
+    'Jose Maurette is an AI Engineer building production multi-agent LLM systems, from agent orchestration to tool-calling and RAG.',
   links: {
     github: getSocialLink('Github'),
     linkedin: getSocialLink('LinkedIn'),

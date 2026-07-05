@@ -19,18 +19,21 @@ export const metadata: Metadata = {
     languages: { 'en-US': 'https://maurette.vercel.app/' },
   },
   title: {
-    default: 'Jose Maurette - AI Engineer | React, Next.js, TypeScript',
+    default: 'Jose Maurette - AI Engineer | Agentic AI, LLM Systems',
     template: '%s | Jose Maurette',
   },
   description:
-    'Jose Maurette is a AI Engineer focused on creating intuitive and performant web experiences. Specializing in React, Next.js, TypeScript, and modern web technologies.',
+    'Jose Maurette is an AI Engineer building production multi-agent LLM systems. Specializing in agent orchestration, tool calling, RAG, and MCP integrations.',
   keywords: [
     'Jose Maurette',
     'AI Engineer',
-    'Web Developer',
-    'React Developer',
-    'Next.js Developer',
-    'TypeScript Developer',
+    'Agentic AI Engineer',
+    'Multi-Agent Systems',
+    'LLM Engineer',
+    'Claude API',
+    'OpenAI API',
+    'Model Context Protocol',
+    'RAG Engineer',
     'Portfolio',
     'Miami Developer',
     'FIU Computer Science',
@@ -48,7 +51,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://maurette.vercel.app/',
     title: 'Jose Maurette - AI Engineer',
-    description: 'AI Engineer specializing in React, Next.js, TypeScript.',
+    description:
+      'AI Engineer specializing in agentic AI, multi-agent LLM systems, and tool-calling/RAG integrations.',
     siteName: 'Jose Maurette Portfolio',
     images: [
       {
@@ -62,7 +66,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Jose Maurette - AI Engineer',
-    description: 'AI Engineer specializing in React, Next.js, TypeScript.',
+    description:
+      'AI Engineer specializing in agentic AI, multi-agent LLM systems, and tool-calling/RAG integrations.',
     images: ['/background.png'],
     creator: '@JoseMaurette1',
   },
