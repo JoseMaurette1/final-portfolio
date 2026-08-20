@@ -6,7 +6,7 @@ function getSocialLink(label: string) {
 
 export const siteConfig = {
   name: 'Jose',
-  title: 'AI Engineer',
+  title: 'Agentic AI & Platforms Engineer',
   email: EMAIL,
   description:
     'Jose Maurette is an AI Engineer building production multi-agent LLM systems, from agent orchestration to tool-calling and RAG.',

@@ -72,6 +72,12 @@ export const PROJECTS: Project[] = [
 export const EXPERIENCE: Experience[] = [
   {
     company: 'Zensah',
+    role: 'Agentic AI Engineer',
+    period: 'August 2026 — Present',
+    link: 'https://zensah.com',
+  },
+  {
+    company: 'Zensah',
     role: 'Agentic AI Engineer Intern',
     period: 'May 2026 - August 2026',
     link: 'https://zensah.com',
