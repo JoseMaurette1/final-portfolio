@@ -17,6 +17,7 @@ import {
 import { AnimatePresence, motion } from 'motion/react'
 import { Menu } from '@base-ui/react/menu'
 import { Button } from '@/components/ui/button'
+import { GithubActivity } from '@/components/github-activity'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { siteConfig } from '@/config/site'
 import { EDUCATION, EXPERIENCE, PROJECTS, SKILLS } from '@/lib/content'
@@ -100,7 +101,7 @@ export function Hero() {
   }, [])
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 pb-10">
       <motion.div
         className="text-muted-foreground flex items-center gap-1 text-sm"
         initial={{ opacity: 0, filter: 'blur(5px)', y: 8 }}
@@ -417,6 +418,20 @@ export function Hero() {
             </div>
           ))}
         </div>
+      </motion.div>
+
+      <div className="my-2 h-px bg-border" />
+
+      <motion.div
+        initial={{ opacity: 0, filter: 'blur(5px)', y: 8 }}
+        animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+        transition={{ ease: 'easeOut', duration: 0.8, bounce: 0, delay: 0.5 }}
+        className="flex flex-col gap-2"
+      >
+        <span className="text-muted-foreground text-xs font-medium uppercase tracking-widest">
+          GitHub Activity
+        </span>
+        <GithubActivity />
       </motion.div>
     </div>
   )
